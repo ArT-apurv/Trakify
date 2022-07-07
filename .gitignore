@@ -2,3 +2,4 @@
 .vscode
 /experiment
 /node_modules
+/client/node_modules
