@@ -1,5 +1,5 @@
 import React from "react";
-import GlobalStyle from "../../Styles";
+import { GlobalStyle } from "../../Styles";
 
 function Playlists() {
   return (

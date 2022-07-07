@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import { useEffect, useState } from "react";
 import { getToken, getCurrentUserProfile } from "./components/Spotify";
 import { catchErrors } from "./Utils/Utils";
@@ -8,17 +8,18 @@ import Tracks from "./components/Pages/Tracks";
 import Playlists from "./components/Pages/Playlists";
 import Playlist from "./components/Pages/Playlist";
 import Homepage from "./components/Pages/Homepage";
-import styled from "styled-components/macro";
-import GlobalStyle from "./Styles";
+// import styled from "styled-components/macro";
+import { GlobalStyle } from "./Styles";
+import { Login } from "./components/Pages";
 
-const StyledLoginButton = styled.a`
-  background-color: green;
-  color: white;
-  padding: 10px 20px;
-  margin: 20px auto;
-  border-radius: 30px;
-  display: inline-block;
-`;
+// const StyledLoginButton = styled.a`
+//   background-color: green;
+//   color: white;
+//   padding: 10px 20px;
+//   margin: 20px auto;
+//   border-radius: 30px;
+//   display: inline-block;
+// `;
 
 function App() {
   const [token, setToken] = useState(null);
@@ -51,12 +52,7 @@ function App() {
       <GlobalStyle />
       <header className="App-header">
         {!token ? (
-          <StyledLoginButton
-            className="App-link"
-            href="http://localhost:5000/login"
-          >
-            Login to Spotify
-          </StyledLoginButton>
+          <Login />
         ) : (
           <>
             <ScrollToTop />
