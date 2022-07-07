@@ -1,0 +1,4 @@
+.env
+.vscode
+/experiment
+/node_modules
