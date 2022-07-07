@@ -7,7 +7,7 @@ import Artist from "./components/Pages/Artist";
 import Tracks from "./components/Pages/Tracks";
 import Playlists from "./components/Pages/Playlists";
 import Playlist from "./components/Pages/Playlist";
-import Homepage from "./components/Pages/Homepage";
+// import Homepage from "./components/Pages/Homepage";
 import { GlobalStyle } from "./Styles";
 import { Login, Profile } from "./components/Pages";
 import { logout } from "./components/Spotify";
@@ -31,7 +31,7 @@ const StyledLogoutButton = styled.button`
 
 function App() {
   const [token, setToken] = useState(null);
-  const [profile, setProfile] = useState(null);
+  const [, setProfile] = useState(null);
   useEffect(() => {
     setToken(getToken);
 
