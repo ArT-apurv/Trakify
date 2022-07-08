@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import SpotifyIcon from "../SVG/SpotifySVG";
 
 const StyledLoginContainer = styled.main`
   display: flex;
@@ -25,12 +26,23 @@ const StyledloginButton = styled.a`
 `;
 
 function Login() {
+  const myStyle = {
+    position: "absolute",
+    left: "84.72%",
+    right: "8.4%",
+    top: "7.03%",
+    bottom: "90.04%",
+  };
+
   return (
-    <StyledLoginContainer>
-      <StyledloginButton href="http://localhost:5000/login">
-        Login to Spotify
-      </StyledloginButton>
-    </StyledLoginContainer>
+    <>
+      <SpotifyIcon style={myStyle} />
+      <StyledLoginContainer>
+        <StyledloginButton href="http://localhost:5000/login">
+          Login to Spotify
+        </StyledloginButton>
+      </StyledLoginContainer>
+    </>
   );
 }
 

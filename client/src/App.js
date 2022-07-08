@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import { getToken, getCurrentUserProfile } from "./components/Spotify";
 import { catchErrors } from "./Utils/Utils";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Artist from "./components/Pages/Artist";
+// import Artist from "./components/Pages/Artist";
 import Tracks from "./components/Pages/Tracks";
 import Playlists from "./components/Pages/Playlists";
 import Playlist from "./components/Pages/Playlist";
 // import Homepage from "./components/Pages/Homepage";
 import { GlobalStyle } from "./Styles";
-import { Login, Profile } from "./components/Pages";
+import { Login, Profile, Artist } from "./components/Pages";
 import { logout } from "./components/Spotify";
 import styled from "styled-components";
 
@@ -38,8 +38,6 @@ function App() {
     const fetchData = async () => {
       const { data } = await getCurrentUserProfile();
       setProfile(data);
-
-      console.log(data);
     };
 
     catchErrors(fetchData());
@@ -66,7 +64,7 @@ function App() {
             <StyledLogoutButton onClick={logout}>LogOut</StyledLogoutButton>
             <ScrollToTop />
             <Routes>
-              <Route path="/top-artist" element={<Artist />}></Route>
+              <Route path="/top-artists" element={<Artist />}></Route>
               <Route path="/top-tracks" element={<Tracks />}></Route>
               <Route path="playlists/:id" element={<Playlist />}></Route>
               <Route path="/playlists" element={<Playlists />}></Route>

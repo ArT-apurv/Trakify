@@ -1,13 +1,34 @@
-import React from "react";
-import { GlobalStyle } from "../../Styles";
+import { useState, useEffect } from "react";
+import { getTopTracks } from "./../Spotify";
+import { catchErrors } from "./../../Utils/Utils";
+import { SectionWrapper, TrackList } from "./../../components";
+import TimeRangeButton from "./PageComponents/TimeRangeButton";
 
-function Tracks() {
+const TopTracks = () => {
+  const [topTracks, setTopTracks] = useState(null);
+  const [activeRange, setActiveRange] = useState("short");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await getTopTracks(`${activeRange}_term`);
+      setTopTracks(data);
+    };
+
+    catchErrors(fetchData());
+  }, [activeRange]);
+
   return (
-    <div>
-      <GlobalStyle />
-      Tracks
-    </div>
-  );
-}
+    <main>
+      <SectionWrapper title="Top Tracks" breadcrumb={true}>
+        <TimeRangeButton
+          activeRange={activeRange}
+          setActiveRange={setActiveRange}
+        />
 
-export default Tracks;
+        {topTracks && topTracks.items && <TrackList tracks={topTracks.items} />}
+      </SectionWrapper>
+    </main>
+  );
+};
+
+export default TopTracks;
