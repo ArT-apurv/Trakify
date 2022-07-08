@@ -1,6 +1,5 @@
 const axios = require("axios").default;
 const express = require("express");
-// const querystring = require("querystring");
 const app = express();
 
 require("dotenv").config();
