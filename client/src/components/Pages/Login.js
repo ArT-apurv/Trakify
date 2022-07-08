@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import SpotifyIcon from "../SVG/SpotifySVG";
+import SpotifyIcon from "../Resources/SpotifySVG";
+import HomeIcon from "../Resources/HomeSVG";
+import image from "./../Resources/Untitled-removebg.png";
 
 const StyledLoginContainer = styled.main`
   display: flex;
@@ -10,14 +12,15 @@ const StyledLoginContainer = styled.main`
 `;
 
 const StyledloginButton = styled.a`
-  display: inline-block;
-  background-color: var(--green);
+  position: absolute;
+  background-color: #1ed760;
   color: var(--white);
   border-radius: var(--border-radius-pill);
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--fz-lg);
   padding: var(--spacing-sm) var(--spacing-xl);
-
+  top: 62vh;
+  left: 10vh;
   &:hover,
   &:focus {
     text-decoration: none;
@@ -25,21 +28,58 @@ const StyledloginButton = styled.a`
   }
 `;
 
+const StyledParagraph = styled.p`
+  position: absolute;
+  width: 527px;
+  height: 258px;
+  left: 10vh;
+  top: 25vh;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 77px;
+
+  color: #ffffff;
+`;
+
 function Login() {
   const myStyle = {
     position: "absolute",
-    left: "84.72%",
-    right: "8.4%",
+    left: "8.4%",
+    right: "84%",
     top: "7.03%",
     bottom: "90.04%",
   };
 
+  const homeStyle = {
+    position: "absolute",
+    top: "6.5%",
+    left: "85%",
+    width: "30px",
+    height: "30px",
+  };
+
+  const imageStyle = {
+    position: "absolute",
+    width: "540px",
+    height: "540px",
+    right: "10vh",
+    top: "15vh",
+  };
+
   return (
     <>
-      <SpotifyIcon style={myStyle} />
       <StyledLoginContainer>
+        <SpotifyIcon style={myStyle} />
+        <HomeIcon style={homeStyle} />
+        <img src={image} style={imageStyle} alt="Headphones"></img>
+        <StyledParagraph>
+          Music you love, right at your fingertips.
+        </StyledParagraph>
         <StyledloginButton href="http://localhost:5000/login">
-          Login to Spotify
+          LOGIN TO SPOTIFY
         </StyledloginButton>
       </StyledLoginContainer>
     </>
