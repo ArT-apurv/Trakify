@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { GlobalStyle } from "../../Styles";
 import { catchErrors } from "../../Utils/Utils";
 import { getTopArtist } from "../Spotify";
 import { SectionWrapper, ArtistGrid } from "../../components";
