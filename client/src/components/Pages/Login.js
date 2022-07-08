@@ -13,14 +13,14 @@ const StyledLoginContainer = styled.main`
 
 const StyledloginButton = styled.a`
   position: absolute;
-  background-color: #1ed760;
+  background-color: #2942c2;
   color: var(--white);
   border-radius: var(--border-radius-pill);
   font-weight: 600;
   font-size: var(--fz-lg);
   padding: var(--spacing-sm) var(--spacing-xl);
-  top: 62vh;
-  left: 10vh;
+  bottom: 24vh;
+  left: 15vh;
   &:hover,
   &:focus {
     text-decoration: none;
@@ -32,12 +32,12 @@ const StyledParagraph = styled.p`
   position: absolute;
   width: 527px;
   height: 258px;
-  left: 10vh;
-  top: 25vh;
+  left: 15vh;
+  top: 20vh;
 
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 60px;
   line-height: 77px;
 
@@ -47,16 +47,14 @@ const StyledParagraph = styled.p`
 function Login() {
   const myStyle = {
     position: "absolute",
-    left: "8.4%",
-    right: "84%",
-    top: "7.03%",
-    bottom: "90.04%",
+    left: "15vh",
+    top: "7vh",
   };
 
   const homeStyle = {
     position: "absolute",
-    top: "6.5%",
-    left: "85%",
+    top: "6.5vh",
+    right: "20vh",
     width: "30px",
     height: "30px",
   };
@@ -65,8 +63,23 @@ function Login() {
     position: "absolute",
     width: "540px",
     height: "540px",
-    right: "10vh",
-    top: "15vh",
+    right: "20vh",
+    top: "17.5vh",
+  };
+
+  const textStyle = {
+    position: "absolute",
+    width: "400px",
+    height: "112px",
+    left: "15vh",
+    bottom: "30vh",
+    fontFamily: "Inter",
+    fontStyle: "normal",
+    fontWeight: "400",
+    fontSize: "22px",
+    lineHeight: "27px",
+    display: "flex",
+    alignItems: "center,",
   };
 
   return (
@@ -78,6 +91,10 @@ function Login() {
         <StyledParagraph>
           Music you love, right at your fingertips.
         </StyledParagraph>
+        <p style={textStyle}>
+          Discover your favorite songs and track your playlists from your
+          personal spotify account.
+        </p>
         <StyledloginButton href="http://localhost:5000/login">
           LOGIN TO SPOTIFY
         </StyledloginButton>
