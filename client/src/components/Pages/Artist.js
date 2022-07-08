@@ -26,7 +26,7 @@ function Artist() {
             activeRange={activeRange}
             setActiveRange={setActiveRange}
           />
-          <ArtistGrid artists={topArtist.items.slice(0, 10)} />
+          <ArtistGrid artists={topArtist.items} />
         </SectionWrapper>
       )}
     </main>
