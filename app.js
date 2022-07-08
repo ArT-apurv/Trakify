@@ -98,25 +98,3 @@ app.get("/callback", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`);
 });
-
-// await axios({
-//   method: "post",
-//   url: "https://accounts.spotify.com/api/token",
-//   data: new URLSearchParams(parameter).toString(),
-//   header: {
-//     "content-type": "application/x-www-form-urlencoded",
-//     Authorization: `Basic ${new Buffer.from(
-//       clientId + ":" + clientSecret
-//     ).toString("base64")}`,
-//   },
-// })
-//   .then((response) => {
-//     if (response.status === 200) {
-//       res.send(`<pre>${JSON.stringify(response.data, null, 2)}</pre>`);
-//     } else {
-//       res.send(response);
-//     }
-//   })
-//   .catch((error) => {
-//     res.send(error);
-//   });
