@@ -1,4 +1,3 @@
-// import StyledGrid from "./../Styles/StyledGrid";
 import { StyledGrid } from "./../Styles";
 
 const ArtistsGrid = ({ artists }) => (

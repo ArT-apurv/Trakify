@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import StyledSection from "./../Styles/StyledSection";
-// import { StyledSection } from "./../Styles";
+import { StyledSection } from "./../Styles";
 
 const SectionWrapper = ({ children, title, seeAllLink, breadcrumb }) => (
   <StyledSection>

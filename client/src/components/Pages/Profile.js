@@ -6,7 +6,6 @@ import {
   getTopArtist,
   getTopTracks,
 } from "../Spotify";
-// import StyledHeader from "./../../Styles/StyledHeader";
 import { StyledHeader } from "./../../Styles";
 import {
   SectionWrapper,
