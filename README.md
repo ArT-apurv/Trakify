@@ -27,3 +27,11 @@ Visualize your personalized Spotify data
    ```shell
    npm start
    ```
+
+<p align="center">
+  <img width="100%" src="./client/src/components/Resources/Screenshot1.png">
+</p>
+
+<p align="center">
+  <img width="100%" src="./client/src/components/Resources/Screenshot2.png">
+</p>
