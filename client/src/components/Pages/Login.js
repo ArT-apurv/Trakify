@@ -5,7 +5,7 @@ import image from "./../Resources/Untitled-removebg.png";
 
 const StyledLoginContainer = styled.main`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -13,14 +13,15 @@ const StyledLoginContainer = styled.main`
 
 const StyledloginButton = styled.a`
   position: absolute;
+  bottom: 24vh;
+  left: 15vh;
   background-color: #2942c2;
   color: var(--white);
   border-radius: var(--border-radius-pill);
   font-weight: 600;
   font-size: var(--fz-lg);
   padding: var(--spacing-sm) var(--spacing-xl);
-  bottom: 24vh;
-  left: 15vh;
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -30,11 +31,10 @@ const StyledloginButton = styled.a`
 
 const StyledParagraph = styled.p`
   position: absolute;
+  left: 15vh;
+  bottom: 45vh;
   width: 527px;
   height: 258px;
-  left: 15vh;
-  top: 20vh;
-
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -53,7 +53,7 @@ function Login() {
 
   const homeStyle = {
     position: "absolute",
-    top: "6.5vh",
+    top: "8vh",
     right: "20vh",
     width: "30px",
     height: "30px",
@@ -61,10 +61,15 @@ function Login() {
 
   const imageStyle = {
     position: "absolute",
-    width: "540px",
-    height: "540px",
+    width: "700px",
+    height: "700px",
     right: "20vh",
-    top: "17.5vh",
+    top: "5vh",
+    filter: "drop-shadow(0px 20px 4px rgba(255, 255, 255, 0.3))",
+    "@media (minWidth: '768px')": {
+      width: "300px",
+      height: "300px",
+    },
   };
 
   const textStyle = {
@@ -92,7 +97,7 @@ function Login() {
           Music you love, right at your fingertips.
         </StyledParagraph>
         <p style={textStyle}>
-          Discover your favorite songs and track your playlists from your
+          Discover your favorite songs, and track your playlists from your
           personal spotify account.
         </p>
         <StyledloginButton href="http://localhost:5000/login">
