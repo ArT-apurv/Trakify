@@ -28,9 +28,13 @@ Visualize your personalized Spotify data
    npm start
    ```
 
+Homepage
+
 <p align="center">
   <img width="100%" src="./client/src/components/Resources/Screenshot1.png">
 </p>
+
+Your personal Spotify profile page
 
 <p align="center">
   <img width="100%" src="./client/src/components/Resources/Screenshot2.png">
